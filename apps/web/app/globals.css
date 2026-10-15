@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #14151D;
+  --bg-secondary: #20232E;
+  --bg-surface: #252735;
+  --bg-card: rgba(37, 39, 53, 0.85);
+  
+  --accent-brand: #A8E6CF;
+  --accent-primary: #A8E6CF;
+  --accent-action: #A8E6CF;
+  --accent-action-hover: #7ED8B8;
+  --accent-yellow: #F2D15C;
+  --accent-highlight: #F2D15C;
+  --accent-blue: #60A5FA;
+  --accent-reward: #A8E6CF;
+  
+  --text-primary: #F6F5F8;
+  --text-secondary: #858B98;
+  --text-light-grey: #E8EAF0;
+  --border-subtle: #393B4B;
+
+  --background: var(--bg-main);
+  --foreground: var(--text-primary);
+}
+
+/* Light Mode Variables & Surface Overrides */
+html.light,
+[data-theme="light"] {
+  --bg-main: #F4F6F9;
+  --bg-secondary: #FFFFFF;
+  --bg-surface: #E8EDF5;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-light-grey: #1E293B;
+  --border-subtle: #CBD5E1;
+
+  --background: var(--bg-main);
+  --foreground: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(32, 35, 46, 0.9) 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, rgba(242, 209, 92, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 30%, rgba(168, 230, 207, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #14151D 0%, #171822 100%);
+  background-attachment: fixed;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.light body {
+  background-color: #F4F6F9 !important;
+  color: #0F172A !important;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(168, 230, 207, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, rgba(96, 165, 250, 0.10) 0%, transparent 45%),
+    linear-gradient(180deg, #F8FAFC 0%, #EDF2F7 100%) !important;
+}
+
+/* Custom Cinematic Glass & Surface Utilities */
+.glass-panel {
+  background: rgba(37, 39, 53, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(57, 59, 75, 0.7);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  color: #0F172A !important;
+}
+
+.glass-panel-glow {
+  background: rgba(37, 39, 53, 0.92);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(242, 209, 92, 0.4);
+  box-shadow: 0 0 30px rgba(242, 209, 92, 0.12), 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+html.light .glass-panel-glow {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border: 1px solid rgba(168, 230, 207, 0.6) !important;
+  box-shadow: 0 0 25px rgba(168, 230, 207, 0.2), 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.surface-elevated {
+  background-color: #252735;
+  border: 1px solid #393B4B;
+}
+
+html.light .surface-elevated {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+}
+
+.surface-secondary {
+  background-color: #20232E;
+}
+
+html.light .surface-secondary {
+  background-color: #F8FAFC !important;
+}
+
+/* Light theme overrides for Tailwind utility colors */
+html.light .bg-\[\#14151D\] {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#20232E\] {
+  background-color: #F8FAFC !important;
+}
+
+html.light .bg-\[\#252735\] {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .text-\[\#F6F5F8\] {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#858B98\],
+html.light .text-\[\#B9BBC7\] {
+  color: #64748B !important;
+}
+
+html.light .border-\[\#393B4B\] {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .border-\[\#393B4B\]\/70,
+html.light .border-\[\#393B4B\]\/60,
+html.light .border-\[\#393B4B\]\/50 {
+  border-color: rgba(226, 232, 240, 0.9) !important;
+}
+
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light textarea,
+html.light select {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+}
+
+html.light input:not([type="checkbox"]):not([type="radio"])::placeholder,
+html.light textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+html.light input:not([type="checkbox"]):not([type="radio"]):focus,
+html.light textarea:focus,
+html.light select:focus {
+  border-color: #7ED8B8 !important;
+  box-shadow: 0 0 0 3px rgba(168, 230, 207, 0.25) !important;
+}
+
+/* Custom Gradients */
+.text-gradient-coral,
+.text-gradient-yellow {
+  background: linear-gradient(135deg, #F2D15C 0%, #E5B83B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-mint {
+  background: linear-gradient(135deg, #A8E6CF 0%, #7ED8B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Shimmer & Pulse Animation */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.02); }
+}
+
+.animate-glow {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #14151D;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #393B4B;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8E6CF;
+}
