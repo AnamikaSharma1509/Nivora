@@ -19,7 +19,7 @@ import {
   TrendingUp,
   Award
 } from "lucide-react";
-import { EpisodeItem } from "@/lib/api";
+import { EpisodeItem } from "../lib/api";
 
 interface EpisodePlayerModalProps {
   episode: EpisodeItem | null;

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { X, Check, Sparkles, User, Palette } from "lucide-react";
 import HumanAvatar, { AvatarOptions } from "./HumanAvatar";
-import { api, AvatarItem } from "@/lib/api";
+import { api, AvatarItem } from "../lib/api";
 
 interface AvatarSelectorModalProps {
   isOpen: boolean;

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Sparkles, Check, ArrowRight, ArrowLeft, Target, ListTodo, Film, User, Shield } from "lucide-react";
-import { api, AvatarItem, GenreItem } from "@/lib/api";
+import { api, AvatarItem, GenreItem } from "../lib/api";
 
 interface OnboardingModalProps {
   isOpen: boolean;

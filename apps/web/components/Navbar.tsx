@@ -21,7 +21,7 @@ import {
   LogIn,
   UserPlus
 } from "lucide-react";
-import { getStoredToken, api, clearStoredToken } from "@/lib/api";
+import { getStoredToken, api, clearStoredToken } from "../lib/api";
 import NivoraLogo from "./NivoraLogo";
 import { useTheme } from "./ThemeProvider";
 

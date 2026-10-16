@@ -15,7 +15,7 @@ import {
   Sliders,
   CheckCircle2
 } from "lucide-react";
-import { api, AvatarItem } from "@/lib/api";
+import { api, AvatarItem } from "../lib/api";
 
 interface IdentityBuilderModalProps {
   isOpen: boolean;

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { X, Check, Sparkles, ShieldCheck, ArrowRight, BookOpen } from "lucide-react";
-import { api, AvatarItem } from "@/lib/api";
+import { api, AvatarItem } from "../lib/api";
 
 interface TraitAdoptionModalProps {
   isOpen: boolean;
