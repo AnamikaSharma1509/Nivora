@@ -1,0 +1,12 @@
+{
+  "name": "nivora",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm --prefix apps/web run build",
+    "start": "npm --prefix apps/web run start",
+    "dev": "npm --prefix apps/web run dev"
+  }
+}
